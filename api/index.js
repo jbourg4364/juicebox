@@ -20,7 +20,7 @@ apiRouter.use(async (req, res, next) => {
         const token = auth.slice(prefix.length);
 
         try {
-            console.log(JWT_SECRET)
+            // console.log(JWT_SECRET)
             const { id } = jwt.verify(token, JWT_SECRET);
             // console.log("This is the id", userID)
             if (id) {

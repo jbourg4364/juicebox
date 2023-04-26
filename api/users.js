@@ -34,11 +34,11 @@ usersRouter.post('/login', async (req, res, next) => {
 
     try {
         const user = await getUserByUsername(username);
-        console.log(user);
+        // console.log(user);
         if (user && user.password == password) {
 
             const token = jwt.sign(user, JWT_SECRET);
-            console.log(JWT_SECRET);
+            // console.log(JWT_SECRET);
             res.send({ message: "you're logged in!", token: token});
 
         } else {
@@ -88,6 +88,7 @@ usersRouter.post('/register', async (req, res, next) => {
     next({ name, message })
   } 
 });
+
 
 
 module.exports = usersRouter;
