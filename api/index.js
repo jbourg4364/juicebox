@@ -38,6 +38,7 @@ apiRouter.use(async (req, res, next) => {
     }
 });
 
+
 apiRouter.use((req, res, next) => {
     if (req.user) {
       console.log("User is set:", req.user);
@@ -56,6 +57,7 @@ apiRouter.use('/posts', postsRouter);
 
 const tagsRouter = require('./tags');
 apiRouter.use('/tags', tagsRouter);
+
 
 
 /* Error Handlers */
