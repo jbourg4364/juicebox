@@ -346,5 +346,6 @@ module.exports = {
     getPostsByTagName,
     getAllTags,
     getUserByUsername,
-    getPostById
+    getPostById,
+    DATABASE_URL
 };
